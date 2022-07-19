@@ -1,5 +1,53 @@
 {% extends 'base.html'  %}
 
 {% block content %}
-ESSE É O SITE DO CAYOZINHOO PEIZEEE
+Bem Vindo!
+<div class="card">
+    <div class="card-body">
+        <h4>STOCKS</h4>
+        <hr>
+        <button class="btn btn-success" href="{% url 'home_add' %}">Adicionar</button>
+        <table class="table">
+            <thead>
+                <tr>
+                   <th>Nome</th>
+                    <th>Ticker</th>
+                    <th>Preço MAX</th>
+                    <th>Preço MIN</th>
+                    <th>Preço de Fechamento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for stock in stocks %}
+                 <tr>
+                <td>{{stock.nome  }}</td>
+                <td>{{ stock.ticker }}</td>
+                <td>{{ stock.precomax }}</td>
+                <td>{{ stock.precomin }}</td>
+                <td>{{ stock.closeprice }}</td>
+                <td>
+                    <button class="btn btn-warning">Editar </button>
+                    <button class="btn btn-danger"> Excluir</button>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>FAKE</td>
+                <td>FAKE.SA</td>
+                <td>220</td>
+                <td>50</td>
+                <td>155</td>
+                <td>
+                    <button class="btn btn-warning">Editar </button>
+                    <button class="btn btn-danger"> Excluir</button>
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
 {% endblock %}

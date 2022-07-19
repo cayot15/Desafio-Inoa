@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fdcf188-ab2d-48be-81e2-3d4f38b59a54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/portal/templates/portal/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.ipynb_checkpoints/API Alpha+ Alerta email-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../.ipynb_checkpoints/API Alpha+ Alerta email-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../API Alpha+ Alerta email.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../API Alpha+ Alerta email.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/.idea/DesafioStocks.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/DesafioStocks/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/DesafioStocks/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/DesafioStocks/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/DesafioStocks/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DesafioStocks/manage.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/portal/Forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portal/templates/portal/Closeprice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portal/templates/portal/Stocks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/portal/templates/portal/home_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/portal/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/portal/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -46,15 +42,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cayot\Documents\GitHub\Desafio-Inoa\ProjetoWallet\webapp\portal\templates\portal" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="webapp" type="Python.DjangoServer" factoryName="Django server">
       <module name="webapp" />
@@ -89,7 +90,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658200020893</updated>
-      <workItem from="1658200022413" duration="5510000" />
+      <workItem from="1658200022413" duration="5915000" />
+      <workItem from="1658237852765" duration="15975000" />
     </task>
     <servers />
   </component>
