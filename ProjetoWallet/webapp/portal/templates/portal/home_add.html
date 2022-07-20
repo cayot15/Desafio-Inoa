@@ -8,6 +8,9 @@
         <form action="{% url 'home_add' %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
+            <button class="btn btn-success" type="submit">SALVAR</button>
+             <a href="{% url 'home' %}" class="btn btn-danger">CANCELAR</a>
+
         </form>
     </div>
 

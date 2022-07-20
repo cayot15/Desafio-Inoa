@@ -6,7 +6,7 @@ Bem Vindo!
     <div class="card-body">
         <h4>STOCKS</h4>
         <hr>
-        <button class="btn btn-success" href="{% url 'home_add' %}">Adicionar</button>
+        <button class="btn btn-success" onclick="location.href='{% url 'home_add' %}'">Adicionar</button>
         <table class="table">
             <thead>
                 <tr>
@@ -14,8 +14,9 @@ Bem Vindo!
                     <th>Ticker</th>
                     <th>Preço MAX</th>
                     <th>Preço MIN</th>
-                    <th>Preço de Fechamento</th>
                     <th>Ações</th>
+                    <th>Preço de Fechamento</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -25,10 +26,10 @@ Bem Vindo!
                 <td>{{ stock.ticker }}</td>
                 <td>{{ stock.precomax }}</td>
                 <td>{{ stock.precomin }}</td>
-                <td>{{ stock.closeprice }}</td>
+                <!-- <td>{{ stock.closeprice }}</td> -->
                 <td>
-                    <button class="btn btn-warning">Editar </button>
-                    <button class="btn btn-danger"> Excluir</button>
+                    <!--<button class="btn btn-warning">Editar </button>-->
+                    <a class="btn btn-danger" href="{% url 'home_delete' stock.id %}"> Excluir</a>
                 </td>
             </tr>
             {% endfor %}
@@ -37,9 +38,9 @@ Bem Vindo!
                 <td>FAKE.SA</td>
                 <td>220</td>
                 <td>50</td>
-                <td>155</td>
+                <!--<td>155</td>-->
                 <td>
-                    <button class="btn btn-warning">Editar </button>
+                   <!-- <button class="btn btn-warning">Editar </button>-->
                     <button class="btn btn-danger"> Excluir</button>
                 </td>
             </tr>

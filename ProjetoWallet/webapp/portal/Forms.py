@@ -11,6 +11,5 @@ class StockForms(forms.ModelForm):
         widgets={'nome':forms.TextInput(attrs={'class':'form-control','autofocus':''}),
                  'ticker':forms.TextInput(attrs={'class':'form-control'}),
                  'precomax':forms.TextInput(attrs={'class':'form-control'}),
-                 'precomin':forms.TextInput(attrs={'class':'form-control'}),
-                 'closeprice':forms.TextInput(attrs={'class':'form-control'})
+                 'precomin':forms.TextInput(attrs={'class':'form-control'})
                  }

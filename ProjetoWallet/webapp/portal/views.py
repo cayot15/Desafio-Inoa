@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from portal.Forms import StockForms
@@ -17,6 +17,11 @@ def home_add(request):
             return redirect('home')
     context ={'form':form}
     return render(request,'portal/home_add.html',context)
+def home_delete(request,stock_pk):
+    stock=Stock.objects.get(pk=stock_pk)
+    stock.delete()
+    return redirect('home')
+
 def Stocks(request):
     return render(request, 'portal/Stocks.html')
 def Closeprice(request):
