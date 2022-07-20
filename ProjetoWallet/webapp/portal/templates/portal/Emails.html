@@ -1,0 +1,17 @@
+{% extends 'base.html'  %}
+
+{% block content %}
+    <html>
+    <head>
+<style>
+    .titulo{
+        color: red;
+    }
+</style>
+</head>
+    <body>
+    <h1 class="titulo">ALERTA DE AÇÕES</h1>
+    <p> ESTE É UM ALERTA DE COMPRA! O PREÇO DE VALE ESTÁ ABAIXO DE {{ preço }}!</p>
+    </body>
+    </html>
+{% endblock %}
