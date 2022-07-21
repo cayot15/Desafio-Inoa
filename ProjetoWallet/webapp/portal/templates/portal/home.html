@@ -14,8 +14,9 @@ Bem Vindo!
                     <th>Ticker</th>
                     <th>Preço MAX</th>
                     <th>Preço MIN</th>
-                    <th>Ações</th>
                     <th>Preço de Fechamento</th>
+                    <th>Ações</th>
+
 
                 </tr>
             </thead>
@@ -26,7 +27,7 @@ Bem Vindo!
                 <td>{{ stock.ticker }}</td>
                 <td>{{ stock.precomax }}</td>
                 <td>{{ stock.precomin }}</td>
-                <!-- <td>{{ stock.closeprice }}</td> -->
+                <td>{{ stock.lastprice }}</td>
                 <td>
                     <!--<button class="btn btn-warning">Editar </button>-->
                     <a class="btn btn-danger" href="{% url 'home_delete' stock.id %}"> Excluir</a>
@@ -38,7 +39,7 @@ Bem Vindo!
                 <td>FAKE.SA</td>
                 <td>220</td>
                 <td>50</td>
-                <!--<td>155</td>-->
+                <<td>0</td>
                 <td>
                    <!-- <button class="btn btn-warning">Editar </button>-->
                     <button class="btn btn-danger"> Excluir</button>

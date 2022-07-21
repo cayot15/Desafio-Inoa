@@ -6,7 +6,7 @@ from portal.models import Stock
 class StockForms(forms.ModelForm):
     class Meta:
         model = Stock
-        exclude = ('exchange',)
+        exclude = ('exchange','lastprice',)
 
         widgets = {'nome': forms.TextInput(attrs={'class': 'form-control', 'autofocus': ''}),
                    'ticker': forms.TextInput(attrs={'class': 'form-control'}),
