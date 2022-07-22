@@ -3,12 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="0fdcf188-ab2d-48be-81e2-3d4f38b59a54" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../API Alpha+ Alerta email.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../API Alpha+ Alerta email.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9be06f19-172d-4b8b-9630-a430ced64523.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9be06f19-172d-4b8b-9630-a430ced64523.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/Forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/Forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/portal/Emails.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/portal/Emails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/portal/Stocks.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/portal/home_edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/portal/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/portal/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/portal/home_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/portal/home_add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/views.py" afterDir="false" />
     </list>
@@ -89,7 +94,8 @@
       <option name="presentableId" value="Default" />
       <updated>1658200020893</updated>
       <workItem from="1658200022413" duration="5915000" />
-      <workItem from="1658237852765" duration="41963000" />
+      <workItem from="1658237852765" duration="42377000" />
+      <workItem from="1658416914336" duration="17652000" />
     </task>
     <servers />
   </component>

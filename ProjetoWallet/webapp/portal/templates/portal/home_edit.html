@@ -1,12 +1,11 @@
-{% extends 'base.html' %}
-<!--Esse é o template do formulário que adiciona objetoas a tabela-->
+{% extends 'base.html'  %}
+
 {% block content %}
 <div class="card">
     <div class="card-body">
-        <h4>ADICIONAR ATIVO</h4>
-        <h5>frequências só podem ser da forma:1m,2m,5m,15m,30m,60m,90m</h5>
+        <h4>editar ATIVO</h4>
         <hr>
-        <form action="{% url 'home_add' %}" method="post">
+        <form action="{% url 'home_edit' stock %}" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <button class="btn btn-success" type="submit">SALVAR</button>

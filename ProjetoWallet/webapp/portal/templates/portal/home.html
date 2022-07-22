@@ -6,7 +6,7 @@ Bem Vindo!
     <div class="card-body">
         <h4>STOCKS</h4>
         <hr>
-        <button class="btn btn-success" onclick="location.href='{% url 'home_add' %}'">Adicionar</button>
+        <a class="btn btn-success" href="{% url 'home_add' %}">Adicionar</a>
         <table class="table">
             <thead>
                 <tr>
@@ -15,12 +15,24 @@ Bem Vindo!
                     <th>Preço MAX</th>
                     <th>Preço MIN</th>
                     <th>Preço de Fechamento</th>
+                    <th>Período de checagem</th>
                     <th>Ações</th>
-
-
                 </tr>
             </thead>
             <tbody>
+             <tr>
+                <td>Exemplo</td>
+                <td>EXMPL4.SA</td>
+                <td>220</td>
+                <td>50</td>
+                <td>0</td>
+                <td>20m</td>
+                <td>
+                    <button class="btn btn-warning">Editar </button>
+                    <button class="btn btn-danger"> Excluir</button>
+                </td>
+            </tr>
+
             {% for stock in stocks %}
                  <tr>
                 <td>{{stock.nome  }}</td>
@@ -28,23 +40,14 @@ Bem Vindo!
                 <td>{{ stock.precomax }}</td>
                 <td>{{ stock.precomin }}</td>
                 <td>{{ stock.lastprice }}</td>
+                 <td>{{ stock.frequencia }}</td>
                 <td>
-                    <!--<button class="btn btn-warning">Editar </button>-->
+                    <a class="btn btn-warning" href="{% url 'home_edit' stock.id %}">Editar </a>
                     <a class="btn btn-danger" href="{% url 'home_delete' stock.id %}"> Excluir</a>
                 </td>
             </tr>
             {% endfor %}
-            <tr>
-                <td>FAKE</td>
-                <td>FAKE.SA</td>
-                <td>220</td>
-                <td>50</td>
-                <<td>0</td>
-                <td>
-                   <!-- <button class="btn btn-warning">Editar </button>-->
-                    <button class="btn btn-danger"> Excluir</button>
-                </td>
-            </tr>
+
             </tbody>
 
         </table>

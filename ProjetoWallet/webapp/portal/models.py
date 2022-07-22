@@ -9,8 +9,8 @@ class Closeprice(models.Model):
 
 class Stock(models.Model):
     nome = models.CharField(max_length=255)
-    exchange = models.CharField(max_length=255)
-    ticker = models.CharField(max_length=255)
+    frequencia = models.CharField(max_length=255,null='1m')
+    ticker = models.CharField(max_length=255, null='1m')
     precomax = models.FloatField()
     precomin = models.FloatField()
     lastprice=models.FloatField(null=True)
