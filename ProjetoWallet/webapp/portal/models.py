@@ -6,7 +6,7 @@ class Closeprice(models.Model):
     data = models.DateField()
     valordefecho = models.FloatField()
 
-
+#Objeto principal as ações
 class Stock(models.Model):
     nome = models.CharField(max_length=255)
     frequencia = models.CharField(max_length=255,null='1m')

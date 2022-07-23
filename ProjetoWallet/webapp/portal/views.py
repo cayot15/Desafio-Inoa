@@ -8,7 +8,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.conf import settings
-from alpha_vantage.timeseries import TimeSeries
+
 
 #função que envia um template html como email
 def email(html_content):
@@ -21,7 +21,6 @@ def email(html_content):
 def home(request):
     stocks = Stock.objects.all()
     context = {'stocks': stocks}
-    ts = TimeSeries(key='0WC0DY1J9IV53XEM', output_format='pandas')
     # OBTER O VALOR DAS AÇÕES
     for stock in stocks:
         abev = Ticker(f'{stock.ticker}')
@@ -31,20 +30,15 @@ def home(request):
         ultimo = len(abev['close'])
         last_price = close_data[ultimo - 1]
         stock.lastprice = round(last_price, 2)
-        #valor de abertura
-        data, meta_data = ts.get_daily(symbol=f'{stock.ticker}', outputsize='full')
-        open_data = data['1. open']
-        open_price = open_data[0]
+
         # ENVIANDO ALERTA POR EMAIL
         if stock.precomax < stock.lastprice:
             html_content = render_to_string('portal/Emails.html', {'preço': f'{stock.precomax}', 'buyorsell': 'VENDA', 'nome': f'{stock.nome}', 'UPORDOWN': 'ACIMA'})
             email(html_content)
         if stock.precomin > stock.lastprice:
-            html_content = render_to_string('portal/Emails.html', {'preço': f'{stock.precomin}', 'buyorsell': 'VENDA', 'nome': f'{stock.nome}', 'UPORDOWN': 'ABAIXO'})
+            html_content = render_to_string('portal/Emails.html', {'preço': f'{stock.precomin}', 'buyorsell': 'COMPRA', 'nome': f'{stock.nome}', 'UPORDOWN': 'ABAIXO'})
             email(html_content)
-        if (open_price < stock.precomin or open_price > stock.precomax) and (stock.lastprice > stock.precomin and stock.lastprice < stock.precomax):
-            html_content = render_to_string('portal/Emails.html',{'preço': f'{stock.precomax}', 'buyorsell': 'COMPRA','nome': f'{stock.nome}','UPORDOWN':'ABAIXO'})
-            email(html_content)
+
     return render(request, 'portal/home.html', context)
 
 
@@ -64,7 +58,7 @@ def home_delete(request, stock_pk):
     stock = Stock.objects.get(pk=stock_pk)
     stock.delete()
     return redirect('home')
-
+#VIEW que edita elemento da tabela
 def home_edit(request, stock_pk):
     stock = Stock.objects.get(pk=stock_pk)
     form = StockForms(request.POST or None, instance=stock)
