@@ -22,22 +22,22 @@ def home(request):
     stocks = Stock.objects.all()
     context = {'stocks': stocks}
     # OBTER O VALOR DAS AÇÕES
-    for stock in stocks:
-        abev = Ticker(f'{stock.ticker}')
+    #for stock in stocks:
+    #    abev = Ticker(f'{stock.ticker}')
         # Intraday - 1 minuto
-        abev = abev.history(period='1d', interval=f'{stock.frequencia}')
-        close_data = abev['close']
-        ultimo = len(abev['close'])
-        last_price = close_data[ultimo - 1]
-        stock.lastprice = round(last_price, 2)
+    #    abev = abev.history(period='1d', interval=f'{stock.frequencia}')
+    #    close_data = abev['close']
+    #    ultimo = len(abev['close'])
+    #    last_price = close_data[ultimo - 1]
+    #   stock.lastprice = round(last_price, 2)
 
         # ENVIANDO ALERTA POR EMAIL
-        if stock.precomax < stock.lastprice:
-            html_content = render_to_string('portal/Emails.html', {'preço': f'{stock.precomax}', 'buyorsell': 'VENDA', 'nome': f'{stock.nome}', 'UPORDOWN': 'ACIMA'})
-            email(html_content)
-        if stock.precomin > stock.lastprice:
-            html_content = render_to_string('portal/Emails.html', {'preço': f'{stock.precomin}', 'buyorsell': 'COMPRA', 'nome': f'{stock.nome}', 'UPORDOWN': 'ABAIXO'})
-            email(html_content)
+    #    if stock.precomax < stock.lastprice:
+    #        html_content = render_to_string('portal/Emails.html', {'preço': f'{stock.precomax}', 'buyorsell': 'VENDA', 'nome': f'{stock.nome}', 'UPORDOWN': 'ACIMA'})
+    #        email(html_content)
+    #    if stock.precomin > stock.lastprice:
+    #        html_content = render_to_string('portal/Emails.html', {'preço': f'{stock.precomin}', 'buyorsell': 'COMPRA', 'nome': f'{stock.nome}', 'UPORDOWN': 'ABAIXO'})
+    #        email(html_content)
 
     return render(request, 'portal/home.html', context)
 
